@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SimpleComputation.css">
+    <title>Simple Computations</title>
+</head>
+<body>
+    <h1>Simple Computations</h1>
+    <div class="pirate-icon"></div>
+
+    <div class="container">
+        <!-- Left box: Celsius to Fahrenheit and vice versa -->
+        <div class="calculator-box">
+            <h3>Celsius to Fahrenheit Converter</h3>
+            <label for="Celsius">Type in the Celsius:</label>
+            <input type="number" id="Celsius">
+            <label for="CFahrenheit">Fahrenheit:</label>
+            <input type="number" id="CFahrenheit" readonly>
+            <div>
+                <button id="ComputeCelsius">Compute</button>
+                <button id="ClearValuesCelsius">Clear Values</button>
+            </div>
+
+            <h3>Fahrenheit to Celsius</h3>
+            <label for="Fahrenheit">Type in the Fahrenheit:</label>
+            <input type="number" id="Fahrenheit">
+            <label for="FCelsius">Celsius:</label>
+            <input type="number" id="FCelsius" readonly>
+            <div>
+                <button id="ComputeFahrenheit">Compute</button>
+                <button id="ClearValuesFahrenheit">Clear Values</button>
+            </div>
+        </div>
+
+        <!-- Right box: Meters to Feet and vice versa -->
+        <div class="calculator-box">
+            <h3>Meters to Feet</h3>
+            <label for="Meters">Type in the Meters:</label>
+            <input type="number" id="Meters">
+            <label for="MFeet">Feet:</label>
+            <input type="number" id="MFeet" readonly>
+            <div>
+                <button id="ComputeMeters">Compute</button>
+                <button id="ClearValuesMeters">Clear Values</button>
+            </div>
+
+            <h3>Feet to Meters</h3>
+            <label for="Feet">Type in the Feet:</label>
+            <input type="number" id="Feet">
+            <label for="FMeters">Meters:</label>
+            <input type="number" id="FMeters" readonly>
+            <div>
+                <button id="ComputeFeet">Compute</button>
+                <button id="ClearValuesFeet">Clear Values</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="index.html">Back to Homepage</a>
+    </div>
+
+    <script src="SimpleComputation.js"></script>
+</body>
+</html>
