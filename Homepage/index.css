@@ -1,0 +1,228 @@
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            transition: background 1s ease, color 1s ease;
+            color: white;
+            overflow: hidden; 
+            transition: opacity 0.5s ease-out;
+        }
+
+        /* Background Videos */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .background-video.active {
+            opacity: 1;
+        }
+
+        /* Day Mode */
+        .day {
+            background-color: #001f3f; 
+        }
+
+        /* Night Mode */
+        .night {
+            background-color: #000; 
+            color: #1E90FF; 
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            transition: background-color 1s ease, color 1s ease;
+        }
+
+        .navbar h1 {
+            font-family: 'Rock Salt', cursive;
+            font-size: 1.8em;
+            color: #FFD700; /* Yellow for day mode */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 0 10px;
+            transition: color 1s ease;
+        }
+
+        .navbar a {
+            font-family: 'Rock Salt', cursive;
+            text-decoration: none;
+            color: #FFD700; 
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border: 2px solid #FFD700; 
+            border-radius: 10px;
+            margin: 0 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #FFD700; 
+            color: #000;
+            border-color: #B8860B; 
+        }
+
+
+        /* Night Mode for Navbar */
+        .night .navbar {
+            background-color: rgba(0, 0, 0, 0.9); 
+        }
+
+        .night .navbar h1 {
+            color: #A3B8D1; 
+        }
+
+        .night .navbar a {
+            color: #A3B8D1; 
+            border-color: #A3B8D1; 
+        }
+
+        .night .navbar a:hover {
+            background-color: #A3B8D1; 
+            color: #000;
+            border-color: #4682B4; 
+        }
+
+        /* One piece Logo */
+        .logo {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Styling for Day and Night logo */
+        #toggleIcon {
+            font-size: 1.8em;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+            transition: transform 0.3s ease, background-color 1s ease;
+        }
+
+        #toggleIcon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Assignment Descriptions Styling */
+        .assignments {
+            position: fixed;
+            top: 150px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: white; 
+            font-size: 1.2em;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Night Mode for Assignments */
+        .night .assignments {
+            background-color: rgba(0, 0, 0, 0.85); 
+            color: white; 
+        }
+
+        /* Night Mode for My Assignments */
+        .night .assignments h2 {
+            color: #A3B8D1; 
+        }
+
+        .assignments h2 {
+            font-family: 'Rock Salt', cursive;
+            text-align: center;
+            color: #FFD700; 
+            margin-bottom: 15px;
+        }
+
+        /* My name */
+        .author {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-family: 'Rock Salt', cursive;
+            font-size: 1em;
+            color: #FFD700; /* Yellow in day mode */
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Night Mode for Creator's name text */
+        .night .author {
+            color: #A3B8D1; /* Cream-blue for night mode */
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 600px) {
+            .navbar h1 {
+                font-size: 1.4em;
+            }
+
+            .navbar a {
+                font-size: 1em;
+            }
+
+            .assignments {
+                font-size: 1em;
+            }
+        }
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar h1 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .navbar a {
+        font-size: 1em;
+        margin: 5px 0;
+        padding: 8px 10px;
+    }
+
+    .assignments {
+        width: 90%;
+        font-size: 1em;
+        padding: 15px;
+        top: 120px; /* Adjust to fit better on smaller screens */
+    }
+
+    #toggleIcon {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+
+    .author {
+        font-size: 0.9em;
+        padding: 5px 8px;
+    }
+}        
